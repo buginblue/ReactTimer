@@ -1,11 +1,3 @@
 @import "base/variables";
 @import "components/navigation";
-
-$space-large: 2.5rem;
-$title-color: #555;
-
-.page-title {
-  color: $title-color;
-  margin-top: $space-large;
-  margin-bottom: $space-large;
-}
+@import "components/clock";

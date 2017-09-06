@@ -27,6 +27,7 @@
     "foundation-sites": "^6.2.0",
     "jquery": "^2.2.1",
     "node-sass": "^3.8.0",
+    "react-addons-test-utils": "^0.14.7",
     "sass-loader": "^3.1.2",
     "script-loader": "^0.6.1",
     "style-loader": "^0.13.0",
