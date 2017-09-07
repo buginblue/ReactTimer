@@ -26,12 +26,20 @@ var Countdown = React.createClass({
       }
     }
   },
+  componentWillUnmount: function () { // fired just before component removed from DOM
+    clearInterval(this.timer)     // clear the timer
+    this.timer = undefined;
+  },
   startTimer: function () {
     this.timer = setInterval(() => {
       var newCount = this.state.count - 1;
       this.setState({
         count: newCount >= 0 ? newCount : 0
       });
+
+      if (newCount === 0) {   // countdown is complete so stop running interval every second
+        this.setState({countdownStatus: 'stopped'})
+      }
     }, 1000);
   },
   handleSetCountdown: function (seconds) {  // countdown component (container component maintaining state)
